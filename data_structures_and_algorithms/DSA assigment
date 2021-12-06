@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+{
+int arr[10]={ 11 , 200 , 900, 800, 756, 857, 976, 655, 45, 2};
+int p,large , sec;
+if (arr[0]>arr[1])
+  {
+     large = arr[1];
+     sec = arr[0];
+  } 
+else
+  {
+     large = arr[1];
+     sec = arr[0];
+  }
+for (p=2; p<10; p++)
+  {
+     if(large<arr[p])
+       {
+         sec = large;
+         large = arr[p];
+       }
+ else if (sec<arr[p])
+   {
+     sec = arr[p];
+   }
+ }
+printf("large-%d \n sec-%d \n" ,large ,sec);
+getch();
+}
+  
